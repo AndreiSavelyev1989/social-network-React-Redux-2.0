@@ -1,0 +1,26 @@
+.postContainer {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-areas: 
+    "avatar message";
+}
+.postImg {
+    width: 100px;
+    height: 100px;
+    grid-area: avatar;
+}
+.postBody{
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+    height: 100px;
+    grid-area: message;
+    border: 1px solid white;
+    background: rgba(128, 128, 128, 0.555);
+    border-radius: 20px;
+}
+.like{
+    width: 30px;
+    height: 30px;
+}

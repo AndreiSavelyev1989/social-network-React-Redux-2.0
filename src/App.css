@@ -1,6 +1,6 @@
 .app-container {
   margin: 0 auto;
-  width: 1200px;
+  width: 970px;
   display: grid;
   grid-template-rows: 60px 1fr 60px;
   grid-template-columns: 2fr 10fr;
@@ -9,4 +9,9 @@
     "navbar content content content"
     "footer footer footer footer";
   grid-gap: 5px;
+}
+.app-container-content{
+    grid-area: content;
+    background: url(./images/mainBackground_2.jpg);
+    border-radius: 10px;
 }

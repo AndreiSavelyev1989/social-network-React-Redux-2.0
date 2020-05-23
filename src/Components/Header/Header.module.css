@@ -1,4 +1,9 @@
 .header {
 grid-area: header;
-background-color: green;
+background: url(https://image.shutterstock.com/image-vector/abstract-black-red-tech-wavy-260nw-758336155.jpg);
+border-radius: 10px;
+}
+.header img{
+    width: 60px;
+    height: 60px;
 }

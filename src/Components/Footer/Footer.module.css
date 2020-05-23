@@ -1,4 +1,9 @@
 .footer{
     grid-area: footer;
-    background-color: orange;
-  }
+    background: url(https://skylarks.london/wp-content/uploads/2015/07/wg_dark_background7.jpg);
+    border-radius: 10px;
+}
+.footer img{
+    width: 60px;
+    height: 60px;
+}

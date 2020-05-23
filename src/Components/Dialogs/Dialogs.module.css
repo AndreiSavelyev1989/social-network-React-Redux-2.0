@@ -1,0 +1,8 @@
+.messages {
+  padding: 10px;
+}
+.backgroundImg {
+  width: auto;
+  height: 1000px;
+  background: url("./../../images/dialogsBackgroundImg.png") 50% 50% no-repeat;
+}

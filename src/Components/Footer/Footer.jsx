@@ -1,9 +1,10 @@
 import  React  from 'react';
 import styles from './Footer.module.css'
+import logo from './../../images/logo.png'
 
 const Footer = () => {
     return <div className={styles.footer}>
-        Footer
+        <img  src={logo} alt="logo"/>
     </div>
 }
 

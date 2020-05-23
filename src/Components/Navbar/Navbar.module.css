@@ -1,5 +1,22 @@
 .navbar{
     grid-area: navbar;
-    background-color: yellow;
+    background: url(./../../images/mainBackground.jpg);
     padding: 10px;
+    border-radius: 10px;
   }
+ 
+  .navbar a {
+    text-decoration: none;
+    color: white;
+  } 
+
+  .navbar a:hover{
+    color: rgb(236, 81, 20);
+  }
+
+  .navbar a:active{
+    color: rgb(41, 170, 41);
+  }
+
+
+

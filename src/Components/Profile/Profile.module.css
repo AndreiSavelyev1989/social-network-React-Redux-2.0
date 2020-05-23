@@ -1,0 +1,9 @@
+.backgroundImg {
+  width: auto;
+  height: auto;
+  background: url("./../../images/profileBackgroundImg.png") fixed 50% 50%
+    no-repeat;
+}
+.profilePage {
+  padding: 10px;
+}
