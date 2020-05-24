@@ -1,7 +1,7 @@
 .navbar{
     grid-area: navbar;
     background: url(./../../images/mainBackground.jpg);
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
   }
  
@@ -14,9 +14,8 @@
     color: rgb(236, 81, 20);
   }
 
-  .navbar a:active{
+  .navbar a.activeLink{
     color: rgb(41, 170, 41);
   }
-
 
 

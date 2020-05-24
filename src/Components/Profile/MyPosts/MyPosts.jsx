@@ -16,6 +16,8 @@ const MyPosts = (props) => {
             <div>New posts:
                 <Post message={'My name is Andrei!'} likesCount={5}/>
                 <Post message={'What a wonderful day!'} likesCount={50}/>
+                <Post message={'My name is Andrei!'} likesCount={5}/>
+                <Post message={'What a wonderful day!'} likesCount={50}/>
             </div>
         </div>
     </div>
