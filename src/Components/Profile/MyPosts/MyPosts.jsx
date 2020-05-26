@@ -5,10 +5,14 @@ import Post from './Post/Post';
 
 const MyPosts = (props) => {
 
-    let postsData = [
+    const posts = [
         {id: 1, message: 'My name is Andrei!', likesCount: 5},
         {id: 2, message: 'What a wonderful day!', likesCount: 50},
+        {id: 3, message: 'I was born in Belarus', likesCount: 10},
+        {id: 4, message: 'My native city is Mogilev', likesCount: 500},
     ]
+
+    const postElements = posts.map(p => <Post message={p.message} id={p.id} likesCount={p.likesCount} />)
 
     return <div>
         <div>
@@ -21,8 +25,7 @@ const MyPosts = (props) => {
             </div>
         </div>
         <div>New posts:
-            <Post message={postsData[0].message} id={postsData[0].id} likesCount={postsData[0].likesCount} />
-            <Post message={postsData[1].message} id={postsData[1].id} likesCount={postsData[1].likesCount} />
+            { postElements }
         </div>
     </div>
 }
