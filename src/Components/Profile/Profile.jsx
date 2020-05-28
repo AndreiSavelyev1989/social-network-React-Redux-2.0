@@ -10,7 +10,7 @@ const Profile = (props) => {
     return <div className={styles.profilePage}>
         <div className={styles.backgroundImg}>
             <ProfileInfo />
-            <MyPosts posts={props.posts}/>
+            <MyPosts posts={props.state.posts}/>
         </div>
 
 
