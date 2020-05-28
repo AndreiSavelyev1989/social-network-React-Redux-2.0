@@ -4,11 +4,13 @@ import MyPosts from './MyPosts/MyPosts';
 import ProfileInfo from './ProfileInfo';
 
 
+
 const Profile = (props) => {
+
     return <div className={styles.profilePage}>
         <div className={styles.backgroundImg}>
             <ProfileInfo />
-            <MyPosts />
+            <MyPosts posts={props.posts}/>
         </div>
 
 
