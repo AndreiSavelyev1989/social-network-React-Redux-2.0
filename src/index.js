@@ -7,8 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import state from "./redux/state"
 
 ReactDOM.render(
-  
-  <React.StrictMode>
+    <React.StrictMode>
     <BrowserRouter>
       <App state={state}/>
     </BrowserRouter>

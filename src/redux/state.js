@@ -23,6 +23,12 @@ const state = {
       { id: 5, message: "My hobby is programming!" },
     ],
   },
+  sidebar: {
+    friends: [
+      { id: 1, name: "Andrei" },
+      { id: 2, name: "Dimych" },
+      { id: 3, name: "Anastasia" },
+    ],
+  },
 };
-
 export default state;
