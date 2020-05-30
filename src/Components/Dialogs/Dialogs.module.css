@@ -1,6 +1,7 @@
 .dialogsContainer {
   display: grid;
   grid-template-columns: 2fr 10fr;
+  padding-right: 20px;
 }
 
 .backgroundImg {
@@ -27,4 +28,8 @@
   border: 1px solid grey;
   background-color: rgba(128, 128, 128, 0.623);
   border-radius: 10px;
+}
+
+.newMessage {
+  padding: 10px;
 }

@@ -1,3 +1,8 @@
+
+let reRenderApp = () => {
+  console.log('state changed')
+}
+
 const state = {
   profilePage: {
     posts: [
@@ -6,6 +11,7 @@ const state = {
       { id: 3, message: "I was born in Belarus", likesCount: 10 },
       { id: 4, message: "My native city is Mogilev", likesCount: 500 },
     ],
+    newPostText: "Hello World",
   },
   dialogsPage: {
     dialogs: [
@@ -31,4 +37,27 @@ const state = {
     ],
   },
 };
+
+window.state = state;
+
+export const addNewPost = () => {
+  state.profilePage.posts.push({
+    id: 5,
+    message: state.profilePage.newPostText,
+    likesCount: 0,
+  });
+  state.profilePage.newPostText = "";
+  reRenderApp(state);
+};
+
+export const updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
+  reRenderApp(state);
+};
+
+export const subscribe = (observer) => {
+  reRenderApp = observer;
+}
+
+
 export default state;
