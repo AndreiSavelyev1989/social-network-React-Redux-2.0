@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import styles from "./MyPosts.module.css";
 import Post from './Post/Post';
 
@@ -10,27 +10,26 @@ const MyPosts = (props) => {
     const newPostText = React.createRef();
 
     const addPost = () => {
-        props.addNewPost();
+        props.dispatch({ type: 'ADD_NEW_POST' });
     }
 
     const onPostChange = () => {
-        
-       let text = newPostText.current.value;
-        props.updateNewPostText(text);
+        let text = newPostText.current.value;
+        props.dispatch({ type: 'UPDATE_NEW_POST_TEXT', newText: text });
     }
 
     return <div>
         <div>
             <h3>My posts</h3>
             <div>
-                <textarea ref={newPostText} onChange={onPostChange} value={props.newPostText}/>
+                <textarea ref={newPostText} onChange={onPostChange} value={props.newPostText} />
             </div>
             <div>
                 <button onClick={addPost}>Add new post</button>
             </div>
         </div>
         <div>New posts:
-            { postElements }
+            {postElements}
         </div>
     </div>
 }
