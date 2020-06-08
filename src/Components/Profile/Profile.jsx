@@ -9,7 +9,7 @@ const Profile = (props) => {
     return <div className={styles.profilePage}>
         <div className={styles.backgroundImg}>
             <ProfileInfo />
-            <MyPostsContainer store={props.store} />
+            <MyPostsContainer />
         </div>
 
 

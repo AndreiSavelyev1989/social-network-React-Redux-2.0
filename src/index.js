@@ -5,14 +5,14 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
 import store from "./redux/redux-store";
-import StoreContext from "./StoreContext";
+import { Provider } from "react-redux";
 
 const reRenderApp = () => {
   ReactDOM.render(
     <BrowserRouter>
-      <StoreContext.Provider value={store}>
+      <Provider store={store}>
         <App />
-      </StoreContext.Provider>
+      </Provider>
     </BrowserRouter>,
     document.getElementById("root")
   );
