@@ -1,57 +1,35 @@
 import React from 'react'
 import styles from './Users.module.css'
 import usersPhoto from "./../../images/usersPhoto.png";
+import * as axios from 'axios'
 
 const Users = (props) => {
 
-    if (props.users.length === 0){
-        {props.setUsers(
-            [
-                {
-                  id: 1,
-                  followed: true,
-                  status: 'I am a good man',
-                  photoUrl: usersPhoto,
-                  fullName: "Andrei",
-                  location: { country: "Belarus", city: "Mogilev" },
-                },
-                {
-                  id: 2,
-                  followed: false,
-                  status: 'I am a good man too',
-                  photoUrl: usersPhoto,
-                  fullName: "Victor",
-                  location: { country: "USA", city: "New-York" },
-                },
-                {
-                  id: 3,
-                  followed: true,
-                  status: 'I am a good man too',
-                  photoUrl: usersPhoto,
-                  fullName: "Alex",
-                  location: { country: "Ukraine", city: "Kiev" },
-                },
-              ]
-        )}
-    }
+  if (props.users.length === 0) {
 
-    return (
+    axios.get('https://social-network.samuraijs.com/api/1.0/users')
+      .then(response => {
+        props.setUsers(response.data.items)
+      })
+  }
 
-        <div>
-            {props.users.map(u => <div key={u.id} className={styles.userData}>
-                <div className={styles.photo}><img src={u.photoUrl} className={styles.userPhoto}  /></div>
-                <div className={styles.button}>
-                    {u.followed
-                        ? <button  onClick={() => { props.unFollow(u.id)} }>UnFollow</button>
-                        : <button  onClick={() => { props.follow(u.id)} }>Follow</button>}
-                </div>
-                <div className={styles.fullName}>FullName: {u.fullName}</div>
-                <div className={styles.status}>Status: {u.status}</div>
-                <div className={styles.country}>Country: {u.location.country}</div>
-                <div className={styles.city}>City: {u.location.city}</div>
-            </div>
-            )}
+  return (
+
+    <div>
+      {props.users.map(u => <div key={u.id} className={styles.userData}>
+        <div className={styles.photo}><img src={u.photos.small != null ? u.photos.small : usersPhoto} className={styles.userPhoto} /></div>
+        <div className={styles.button}>
+          {u.followed
+            ? <button onClick={() => { props.unFollow(u.id) }}>UnFollow</button>
+            : <button onClick={() => { props.follow(u.id) }}>Follow</button>}
         </div>
-    )
+        <div className={styles.name}>Name: {u.name}</div>
+        <div className={styles.status}>Status: {u.status}</div>
+        <div className={styles.country}>Country: 'There must be country name'</div>
+        <div className={styles.city}>City: 'There must be city name'</div>
+      </div>
+      )}
+    </div>
+  )
 }
 export default Users;
