@@ -1,24 +1,28 @@
-.navbar{
-    grid-area: navbar;
-    background: url(./../../images/mainBackground.jpg);
-    padding: 20px;
-    border-radius: 10px;
-  }
- 
-  .navbar a {
-    text-decoration: none;
-    color: white;
-  } 
+.navbar {
+  grid-area: navbar;
+  background: url(./../../images/mainBackground.jpg);
+  padding: 20px;
+  border-radius: 10px;
+}
 
-  .navbar a:hover{
-    color: rgb(236, 81, 20);
-  }
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
 
-  .navbar a.activeLink{
-    color: rgb(41, 170, 41);
-  }
+.navbar a:hover {
+  color: rgb(236, 81, 20);
+}
 
-.friends{
+.navbar a.activeLink {
+  color: rgb(41, 170, 41);
+}
+
+.navbar .settings{
+  margin-top: 30px;
+}
+
+.friends {
   margin-top: 50px;
   text-align: center;
 }
