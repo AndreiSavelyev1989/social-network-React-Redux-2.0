@@ -6,19 +6,8 @@ import Pagination from '../Pagination/Pagination';
 
 const Users = (props) => {
 
-    //   const totalPages = Math.ceil(props.totalItemsCount / props.pageSize)
-
-    // const pages = [];
-    // for (let i = 1; i <= totalPages; i++) {
-    //   pages.push(i)
-    // }
-
     return (
           <div className={styles.usersContainer}>
-              {/* {pages.map(p => {
-                return <span className={`${props.currentPage === p && styles.currentPage} ${styles.pages}`}
-                onClick = {() => props.onPageChanged(p)}>{p}</span>
-              })} */}
             <Pagination 
             currentPage = {props.currentPage}
             onPageChanged = {props.onPageChanged}
