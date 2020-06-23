@@ -19,8 +19,8 @@ const Users = (props) => {
 
       {props.users.map(u => <div key={u.id} className={styles.userData}>
         <div className={styles.photo}>
-          <NavLink to={'/profile'}>
-            <img src={u.photos.small != null ? u.photos.small : usersPhoto} className={styles.userPhoto} />
+          <NavLink to={'/profile/' + u.id}>
+            <img src={u.photos.large != null ? u.photos.large : usersPhoto} className={styles.userPhoto} />
           </NavLink>
         </div>
         <div className={styles.button}>

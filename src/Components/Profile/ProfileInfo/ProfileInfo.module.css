@@ -1,0 +1,7 @@
+.profileInfoContainer {
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 30px;
+    text-align: center;
+    background-color: rgba(88, 36, 36, 0.685);
+}

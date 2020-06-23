@@ -17,7 +17,7 @@
     height: 100px;
     grid-area: message;
     border: 1px solid white;
-    background: rgba(128, 128, 128, 0.555);
+    background: rgba(88, 36, 36, 0.685);
     border-radius: 20px;
 }
 .like{
