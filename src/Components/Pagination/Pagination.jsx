@@ -20,8 +20,8 @@ const Pagination = ({totalItemsCount, pageSize, currentPage, onPageChanged, port
             {portionNumber > 1 && <button onClick={() => { setPortionNumber(portionNumber - 1) }}>Prev</button>}
             {pages.filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber)
                 .map(p => {
-                    return <span className={`${currentPage === p && styles.currentPage} ${styles.pages}`}
-                        onClick={() => onPageChanged(p)} key={p.id}>{p}</span>
+                    return <span key={p} className={`${currentPage === p && styles.currentPage} ${styles.pages}`}
+                        onClick={() => onPageChanged(p)}>{p}</span>
                 })}
             {portionCount > portionNumber && <button onClick={() => { setPortionNumber(portionNumber + 1) }}>Next</button>}
 
