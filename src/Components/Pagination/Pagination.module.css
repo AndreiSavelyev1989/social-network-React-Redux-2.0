@@ -2,7 +2,11 @@
     font-weight: bold;
   }
   
-  .pages {
+  .pageNumber {
     padding: 5px;
     display: inline-block;
+  }
+
+  .pageNumber :hover{
+    background-color: lawngreen;
   }
