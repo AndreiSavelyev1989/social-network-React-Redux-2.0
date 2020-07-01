@@ -3,7 +3,6 @@ import styles from './Users.module.css'
 import usersPhoto from "./../../images/usersPhoto.png";
 import Pagination from '../Pagination/Pagination';
 import { NavLink } from 'react-router-dom';
-import { usersAPI } from '../../api/api';
 
 
 const Users = (props) => {
@@ -27,23 +26,13 @@ const Users = (props) => {
         <div className={styles.button}>
           {u.followed
             ? <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
-              {props.toggleFollowingInProgress(true, u.id)}
-              usersAPI.unFollow(u.id).then(data => {
-                if (data.resultCode === 0) {
-                  props.unFollow(u.id)
-                }
-                {props.toggleFollowingInProgress(false, u.id)}
-              })
-              
+
+              {props.unFollow(u.id)}
+
             }}>UnFollow</button>
             : <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
-              {props.toggleFollowingInProgress(true, u.id)}
-              usersAPI.follow(u.id).then(data => {
-                if (data.resultCode === 0) {
-                  props.follow(u.id)
-                }
-                {props.toggleFollowingInProgress(false, u.id)}
-              })
+              
+              {props.follow(u.id)}
               
             }}>Follow</button>}
         </div>

@@ -1,3 +1,5 @@
+import { profileAPI } from "../api/api";
+
 const ADD_NEW_POST = "ADD_NEW_POST";
 const UPDATE_NEW_POST_TEXT = "UPDATE_NEW_POST_TEXT";
 const SET_USER_PROFILE = "SET_USER_PROFILE";
@@ -10,24 +12,23 @@ const initialState = {
     { id: 4, message: "My native city is Mogilev", likesCount: 500 },
   ],
   newPostText: "Hello World",
-  profile: null
-}
+  profile: null,
+};
 
 const profileReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_NEW_POST: 
+    case ADD_NEW_POST:
       let newPost = {
         id: 5,
         message: state.newPostText,
         likesCount: 0
-      }
+      };
 
       return {
         ...state,
         posts: [...state.posts, newPost],
-        newPostText: ''
-      }
-    
+        newPostText: ""
+      };
 
     case UPDATE_NEW_POST_TEXT:
       return {
@@ -40,14 +41,26 @@ const profileReducer = (state = initialState, action) => {
         ...state,
         profile: action.profile
       };
-    
+
     default:
       return state;
   }
 };
 
 export const addNewPost = () => ({ type: ADD_NEW_POST });
-export const updateNewPostText = (text) => ({ type: UPDATE_NEW_POST_TEXT, newText: text });
-export const setUserProfile = (profile) => ({ type: SET_USER_PROFILE, profile });
+export const updateNewPostText = (text) => ({
+  type: UPDATE_NEW_POST_TEXT,
+  newText: text
+});
+export const setUserProfile = (profile) => ({
+  type: SET_USER_PROFILE,
+  profile
+});
+
+export const getUserProfile = (userId) => (dispatch) => {
+  profileAPI.getUserProfile(userId).then((data) => {
+    dispatch(setUserProfile(data));
+  });
+};
 
 export default profileReducer;
