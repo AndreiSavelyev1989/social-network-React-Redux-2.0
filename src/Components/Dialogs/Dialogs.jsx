@@ -20,8 +20,6 @@ const Dialogs = (props) => {
         props.updateNewMessageBody(messageBody)
     }
 
-    if (!props.isAuth) return <Redirect to = {'/login'}/>
-    
     return (
         <div className={styles.backgroundImg}>
 
