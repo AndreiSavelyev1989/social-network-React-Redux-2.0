@@ -1,7 +1,33 @@
 .profileInfoContainer {
-    padding: 20px;
-    border: 1px solid grey;
-    border-radius: 30px;
+  padding: 20px;
+  border: 1px solid grey;
+  border-radius: 30px;
+  text-align: left;
+  background-color: rgba(88, 36, 36, 0.685);
+}
+
+.profileInfoContainer h2 {
     text-align: center;
-    background-color: rgba(88, 36, 36, 0.685);
+    color: rgb(94, 230, 16);
+}
+
+.profileInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "userPhoto descriptionUserData";
+
+}
+
+.userPhoto {
+  grid-area: userPhoto;
+}
+
+.descriptionUserData {
+  grid-area: descriptionUserData;
+}
+
+.descriptionUserData span {
+    color: rgb(116, 223, 125);
+    font-size: 20px;
+    padding-top: 20px;
 }

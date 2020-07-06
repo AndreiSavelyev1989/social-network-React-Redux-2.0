@@ -20,10 +20,11 @@ class ProfileStatus extends React.Component {
 
     render() {
         return (
-            <div className = {styles.statusContainer}> My Status:
+            <div className = {styles.statusContainer}>
+                <span>My Status :</span>
                 {!this.state.editMode &&
                     <div className = {styles.status}>
-                        <span onDoubleClick={this.activateEditMode}>{this.props.status}</span>
+                        <div onDoubleClick={this.activateEditMode}>{this.props.status}</div>
                     </div>
                 }
                 {this.state.editMode &&
