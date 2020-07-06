@@ -1,0 +1,8 @@
+.statusContainer {
+padding-top: 20px;
+}
+
+.status {
+    display: inline-block;
+    padding-left: 10px;
+}
