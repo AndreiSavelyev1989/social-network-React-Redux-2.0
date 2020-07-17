@@ -1,0 +1,11 @@
+.loginFormWrapper{
+    padding: 20px;
+}
+
+.loginFormWrapper input, button{
+    margin-top: 15px;
+}
+
+.loginFormWrapper span{
+    padding-left: 20px;
+}
