@@ -1,5 +1,5 @@
 import React from 'react';
-import { updateNewPostText, addNewPost } from '../../../redux/profile-reducer';
+import { addNewPost } from '../../../redux/profile-reducer';
 import MyPosts from './MyPosts';
 import { connect } from 'react-redux';
 
@@ -13,6 +13,6 @@ const mapStateToProps = (state) => {
 
 //Вместо Context API, используем connect, который делает тоже что и Context API только инкапсулирует детали
 
-const MyPostsContainer = connect(mapStateToProps, {addNewPost, updateNewPostText})(MyPosts)
+const MyPostsContainer = connect(mapStateToProps, {addNewPost})(MyPosts)
 
 export default MyPostsContainer;
